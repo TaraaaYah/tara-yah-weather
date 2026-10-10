@@ -77,7 +77,7 @@ It gives clear messages for an empty search box, a city that can't be found, an 
 ### Steps
 1. Download or clone this repository into `openFrameworks/apps/myApps/`.
 2. Open `DataDrivenApp.sln` in Visual Studio. If the project does not load, open the **openFrameworks Project Generator**, import this folder, make sure **ofxGui** is ticked under Addons, and click **Update / Generate**.
-3. Create the file `bin/data/apikey.txt` and put your WeatherAPI.com key on the first line. The app reads it on start-up, so the key is never stored in the code. This file is listed in `.gitignore` so it is not uploaded to GitHub.
+3. The WeatherAPI.com key is on the first line of `bin/data/apikey.txt`, which is included so the app runs straight away. The app reads it on start-up, so the key is kept out of the code and can be changed without rebuilding.
 4. Press **F5** to build and run.
 
 ---
@@ -91,7 +91,7 @@ DataDrivenApp/
 │   ├── ofApp.h       → class, variables and GUI controls
 │   └── ofApp.cpp     → API request, JSON parsing and drawing
 ├── bin/data/
-│   └── apikey.txt    → your API key (not uploaded to GitHub)
+│   └── apikey.txt    → the WeatherAPI.com key, read on start-up
 ├── addons.make       → lists the ofxGui addon
 ├── .gitignore        → stops build files being uploaded
 └── README.md
